@@ -1,0 +1,263 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, sans-serif;
+}
+
+.hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: linear-gradient(135deg, #6366f1, #a855f7);
+  color: white;
+  gap: 1rem;
+}
+
+.hero h1 {
+  font-size: 3rem;
+}
+
+.cta-btn {
+  display: inline-block;
+  padding: 0.75rem 2rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 999px;
+  background: white;
+  color: #6366f1;
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.cta-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+}
+.features {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  padding: 4rem 2rem;
+}
+
+.feature-card {
+  padding: 2rem;
+  border-radius: 12px;
+  background: #f3f4f6;
+  text-align: center;
+}
+.feature-card {
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.feature-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+.pricing {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 4rem 2rem;
+  background: #f9fafb;
+}
+
+.price-card {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 2rem;
+  width: 250px;
+  text-align: center;
+}
+
+.price-card .price {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 1rem 0;
+}
+
+.price-card .price span {
+  font-size: 1rem;
+  font-weight: normal;
+  color: #6b7280;
+}
+
+.price-card ul {
+  list-style: none;
+  margin: 1.5rem 0;
+}
+
+.price-card li {
+  padding: 0.5rem 0;
+  color: #4b5563;
+}
+
+.price-card button {
+  padding: 0.6rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  background: #6366f1;
+  color: white;
+  cursor: pointer;
+}
+
+.price-card.highlighted {
+  border: 2px solid #6366f1;
+  transform: scale(1.05);
+}
+.price-card {
+  transition: transform 0.2s, border 0.2s;
+}
+
+.price-card:hover {
+  border: 2px solid #6366f1;
+  transform: scale(1.05);
+}
+
+.pricing:has(.price-card:not(.highlighted):hover) .highlighted {
+  border: 1px solid #e5e7eb;
+  transform: none;
+}
+.testimonials {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: 4rem 2rem;
+}
+
+.testimonial-card {
+  background: #f3f4f6;
+  border-radius: 12px;
+  padding: 2rem;
+  max-width: 280px;
+  text-align: left;
+}
+
+.testimonial-card p {
+  font-style: italic;
+  color: #374151;
+  margin-bottom: 1rem;
+}
+
+.testimonial-card h4 {
+  color: #6366f1;
+  font-size: 0.9rem;
+}
+.site-footer {
+  background: #111827;
+  color: #d1d5db;
+  padding: 4rem 2rem 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.footer-col h4 {
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.footer-col ul {
+  list-style: none;
+}
+
+.footer-col li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-col a {
+  color: #d1d5db;
+  text-decoration: none;
+}
+
+.footer-col a:hover {
+  color: white;
+}
+
+.footer-bottom {
+  width: 100%;
+  text-align: center;
+  border-top: 1px solid #374151;
+  padding-top: 1.5rem;
+  margin-top: 1.5rem;
+  font-size: 0.85rem;
+  color: #9ca3af;
+}
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .features {
+    grid-template-columns: 1fr;
+  }
+
+  .pricing {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .price-card.highlighted {
+    transform: none;
+  }
+
+  .testimonials {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .site-footer {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+.focus-timer {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: #eef2ff;
+}
+
+.timer-display {
+  font-size: 4rem;
+  font-weight: bold;
+  color: #6366f1;
+  margin: 1.5rem 0;
+}
+
+.timer-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.timer-buttons button {
+  padding: 0.6rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  background: #6366f1;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.timer-buttons button:hover {
+  background: #4f46e5;
+}
+.price-card.selected {
+  border: 2px solid #16a34a;
+}
+
+.choose-btn.selected {
+  background: #16a34a;
+}
